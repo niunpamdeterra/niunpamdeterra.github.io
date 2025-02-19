@@ -11,29 +11,21 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<style>
-			#footer {
-				background: #07fee9;
-				}
 			h2 {
 				color: black;
 			}
 		</style>
 	</head>
+	
 	<body>
-
-		<!-- Header -->
-			<header id="header">
-				<div class="inner">
-					<a href="index.html" class="logo">Ni un pam de terra</a>
-					<nav id="nav">
-						<a href="index.html">Inici</a>
-						<a href="quisom.html">Qui som?</a>
-						<a href="argumentari.html">Argumentari</a>
-					</nav>
-				</div>
-			</header>
-			<a href="#menu" class="navPanelToggle"><span class="fa fa-bars"></span></a>
-
+		<script>
+			fetch('header.html')
+			  .then(response => response.text())
+			  .then(data => {
+				document.getElementById('header').innerHTML = data;
+			  });
+		</script>
+		<div id="header"></div>
 		<!-- Banner -->
 			<section id="banner">
 				<div class="inner">

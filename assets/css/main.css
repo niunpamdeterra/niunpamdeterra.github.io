@@ -3128,7 +3128,7 @@
 			}
 
 		#header .logo {
-			font-family: 'Pacifico', cursive;
+			font-family: 'Helvetica', cursive;
 			display: inline-block;
 			height: inherit;
 			left: 0;
@@ -3137,10 +3137,10 @@
 			padding: 0;
 			position: absolute;
 			top: 0;
-			color: #e5474b;
+			color: white;
 			font-size: 1.75em;
 			text-transform: none;
-			font-weight: normal;
+			font-weight: 700;
 			padding: 0;
 		}
 
@@ -3743,10 +3743,9 @@
 /* Footer */
 
 	#footer {
-		background-color: #e5474b;
+		background: #00c6ff;
 		color: #f2a3a5;
 		padding: 4em 0 2em 0;
-		background: #e5474b;
 	}
 
 		#footer input, #footer select, #footer textarea {
