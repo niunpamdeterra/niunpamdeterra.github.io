@@ -21,18 +21,14 @@
 	</head>
 	<body>
 
-		<!-- Header -->
-			<header id="header">
-				<div class="inner">
-					<a href="index.html" class="logo">Ni un pam de terra</a>
-					<nav id="nav">
-						<a href="index.html">Inici</a>
-						<a href="quisom.html">Qui som?</a>
-						<a href="argumentari.html">Argumentari</a>
-					</nav>
-				</div>
-			</header>
-			<a href="#menu" class="navPanelToggle"><span class="fa fa-bars"></span></a>
+		<script>
+			fetch('header.html')
+			  .then(response => response.text())
+			  .then(data => {
+				document.getElementById('header').innerHTML = data;
+			  });
+		</script>
+		<div id="header"></div>
 
 		<!-- Main -->
 			<section id="main" >
