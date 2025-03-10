@@ -25,6 +25,11 @@
 			  .then(data => {
 				document.getElementById('header').innerHTML = data;
 			  });
+			fetch('peudepagina.html')
+				.then(response => response.text())
+				.then(data => {
+				document.getElementById('footer').innerHTML = data;
+			});
 		</script>
 		<div id="header"></div>
 		<!-- Banner -->
@@ -121,34 +126,7 @@
 			</section>
 
 		<!-- Footer -->
-			<section id="footer">
-				<div class="inner">
-					<header>
-						<h2>Contacta amb nosaltres</h2>
-					</header>
-					<form method="post" action="https://formsubmit.co/niunpamdeterra@gmail.com">
-
-						<div class="field half first">
-							<label for="name">Nom</label>
-							<input type="text" name="name" id="name" />
-						</div>
-						<div class="field half">
-							<label for="email">Correu electrònic</label>
-							<input type="text" name="email" id="email" />
-						</div>
-						<div class="field">
-							<label for="message">Missatge</label>
-							<textarea name="message" id="message" rows="6"></textarea>
-						</div>
-						<ul class="actions">
-							<li><input type="submit" value="Envia" class="alt" /></li>
-						</ul>
-					</form>
-					<!-- <div class="copyright">
-						&copy; Untitled Design: <a href="https://templated.co/">TEMPLATED</a>. Images <a href="https://unsplash.com/">Unsplash</a>
-					</div> -->
-				</div>
-			</section>
+		<div id="footer"></div>
 
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
