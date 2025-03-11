@@ -3741,7 +3741,15 @@
 		}
 
 /* Footer */
-
+	.fa-instagram::before {
+		font-size: 35px;
+  	}
+	.fa-twitter::before {
+		font-size: 35px;
+  	}
+	.fa-facebook::before {
+		font-size: 35px;
+  	}
 	#footer {
 		background: #00c6ff;
 		color: #f2a3a5;
