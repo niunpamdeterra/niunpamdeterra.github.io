@@ -18,6 +18,9 @@
 			  .then(response => response.text())
 			  .then(data => {
 				document.getElementById('header').innerHTML = data;
+				const script = document.createElement('script');
+            	script.src = 'assets/js/main.js';
+           		document.body.appendChild(script);
 			  });
 			fetch('peudepagina.html')
 				.then(response => response.text())
@@ -31,11 +34,11 @@
 			<section id="main">
 				<div class="inner">
 					<header class="major special">
-						<h1>Elements</h1>
-						<p>Lorem ipsum dolor sit amet nullam id egestas urna aliquam</p>
+						<h1>En construcció</h1>
+						<p>Argumentant...</p>
 					</header>
 
-					<!-- Text -->
+					<!--
 						<section>
 							<h3>Text</h3>
 							<p>This is <b>bold</b> and this is <strong>strong</strong>. This is <i>italic</i> and this is <em>emphasized</em>.
@@ -80,7 +83,6 @@ i++;
 print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 						</section>
 
-					<!-- Lists -->
 						<section>
 							<h3>Lists</h3>
 							<div class="row">
@@ -169,7 +171,6 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 							</div>
 						</section>
 
-					<!-- Table -->
 						<section>
 							<h3>Table</h3>
 							<h4>Default</h4>
@@ -264,7 +265,6 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 							</div>
 						</section>
 
-					<!-- Buttons -->
 						<section>
 							<h3>Buttons</h3>
 							<ul class="actions">
@@ -303,7 +303,6 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 							</ul>
 						</section>
 
-					<!-- Form -->
 						<section>
 							<h3>Form</h3>
 							<form method="post" action="#">
@@ -358,7 +357,6 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 							</form>
 						</section>
 
-					<!-- Image -->
 						<section>
 							<h3>Image</h3>
 							<h4>Fit</h4>
@@ -384,14 +382,13 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 
 				</div>
 			</section>
-
+		-->
 		<div id="footer"></div>
 
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/skel.min.js"></script>
 			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
 
 	</body>
 </html>
