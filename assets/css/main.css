@@ -3229,18 +3229,11 @@
 		top: 0.5em;
 		width: 3.5em;
 	}
-	
-	.fa-bars {
-		display: none;
-	}
 
 	@media screen and (max-width: 736px) {
 		.navPanelToggle {
 			display: block; /* Show toggle on mobile screens */
 			right: 1em; /* Adjust positioning */
-		}
-		.fa-bars {
-			display: inline-block;
 		}
 	
 		.navPanelToggle:before {
