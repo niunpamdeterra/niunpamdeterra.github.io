@@ -3230,16 +3230,24 @@
 		width: 3.5em;
 	}
 	
+	.fa-bars {
+		display: none;
+	}
+
 	@media screen and (max-width: 736px) {
 		.navPanelToggle {
 			display: block; /* Show toggle on mobile screens */
 			right: 1em; /* Adjust positioning */
+		}
+		.fa-bars {
+			display: block;
 		}
 	
 		.navPanelToggle:before {
 			display: block;
 		}
 	}
+
 
 	#navPanel {
 		-moz-transform: translatex(20em);
