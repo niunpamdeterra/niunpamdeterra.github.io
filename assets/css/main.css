@@ -3219,7 +3219,7 @@
 			font-weight: normal;
 			text-transform: none !important;
 			color: #fff;
-			display: block;
+			/*display: block;*/
 			font-size: 16px;
 			height: 2.25em;
 			left: 0.5em;
@@ -3230,7 +3230,7 @@
 			width: 3.5em;
 		}
 
-		@media screen and (max-width: 980px) {
+		@media (max-width: 980px) {
 
 			.navPanelToggle {
 				display: block;
