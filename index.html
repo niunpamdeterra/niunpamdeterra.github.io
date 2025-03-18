@@ -10,7 +10,6 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
-		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 		<!-- afegir aquí els estils personalitzats del web -->
 		<style>
 			h2 {
@@ -25,6 +24,9 @@
 			  .then(response => response.text())
 			  .then(data => {
 				document.getElementById('header').innerHTML = data;
+				const script = document.createElement('script');
+            	script.src = 'assets/js/main.js';
+           		document.body.appendChild(script);
 			  });
 			fetch('peudepagina.html')
 				.then(response => response.text())
@@ -133,7 +135,6 @@
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/skel.min.js"></script>
 			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
 
 	</body>
 </html>
