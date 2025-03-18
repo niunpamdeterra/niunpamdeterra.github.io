@@ -3207,57 +3207,39 @@
 		right: 3em;
 		top: .75em;
 		width: 4em;
-		display: none;
+		display: none; /* Default: Hide for larger screens */
 		z-index: 10002;
 	}
-
+	
+	.navPanelToggle:before {
+		-moz-osx-font-smoothing: grayscale;
+		-webkit-font-smoothing: antialiased;
+		font-family: FontAwesome;
+		font-style: normal;
+		font-weight: normal;
+		text-transform: none !important;
+		color: #fff;
+		display: none; /* Will only show if navPanelToggle is visible */
+		font-size: 16px;
+		height: 2.25em;
+		left: 0.5em;
+		line-height: 2.25em;
+		position: absolute;
+		text-align: center;
+		top: 0.5em;
+		width: 3.5em;
+	}
+	
+	@media screen and (max-width: 736px) {
+		.navPanelToggle {
+			display: block; /* Show toggle on mobile screens */
+			right: 1em; /* Adjust positioning */
+		}
+	
 		.navPanelToggle:before {
-			-moz-osx-font-smoothing: grayscale;
-			-webkit-font-smoothing: antialiased;
-			font-family: FontAwesome;
-			font-style: normal;
-			font-weight: normal;
-			text-transform: none !important;
-			color: #fff;
-			display: none;
-			font-size: 16px;
-			height: 2.25em;
-			left: 0.5em;
-			line-height: 2.25em;
-			position: absolute;
-			text-align: center;
-			top: 0.5em;
-			width: 3.5em;
-		}
-
-		@media (max-width: 980px) {
-
-			.navPanelToggle {
-				display: block;
-			}
-
-		}
-
-		@media screen and (max-width: 736px) {
-
-			.navPanelToggle {
-				right: 1em;
-			}
-
-		}
-
-		.navPanelToggle *:before {
-			color: #fff;
 			display: block;
-			font-size: 16px;
-			height: 2.25em;
-			left: 0.5em;
-			line-height: 2.25em;
-			position: absolute;
-			text-align: center;
-			top: 0.5em;
-			width: 3.5em;
 		}
+	}
 
 	#navPanel {
 		-moz-transform: translatex(20em);
