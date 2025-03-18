@@ -3240,7 +3240,7 @@
 			right: 1em; /* Adjust positioning */
 		}
 		.fa-bars {
-			display: block;
+			display: inline-block;
 		}
 	
 		.navPanelToggle:before {
