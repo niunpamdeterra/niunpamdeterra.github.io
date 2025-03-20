@@ -51,7 +51,7 @@
 							const postElement = document.createElement('div');
 							postElement.className = 'blog-card';
 							postElement.innerHTML = `<a href="${post.enllac}"><h4 class="h4-b" >${post.titol}</h4></a><p>${post.descripcio}</p>`;
-							if (index + 1 < posts.length) postElement.innerHTML = postElement.innerHTML + `<hr />`;
+							if (index + 1 < posts.length && posts.length <= 3) postElement.innerHTML = postElement.innerHTML + `<hr />`;
 							blogList.appendChild(postElement);
 						}
 						
@@ -96,7 +96,7 @@
 				</div>
 			</section>
 				
-		<!-- Two -->
+		<!-- codi d'exemple 
 			<section id="two">
 				<div class="inner">
 					<article>
@@ -123,7 +123,7 @@
 					</article>
 				</div>
 			</section>
-
+			-->
 		<!-- Three 
 			<section id="three">
 				<div class="inner">
