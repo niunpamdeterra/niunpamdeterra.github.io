@@ -39,6 +39,7 @@
 			fetch('assets/posts/directori_posts.json')
 				.then(response => response.json())
 				.then(posts => {
+					const numMaxPosts = 3
 					// Ordena els posts de més recent a més vell
 					posts.sort((a, b) => {
 						const dateA = new Date(a.data.split('/').reverse().join('-'));
@@ -47,16 +48,16 @@
 					});
 					const blogList = document.querySelector('.blog-list');
 					posts.forEach((post, index) => {
-						if(index < 3) {
+						if(index < numMaxPosts) {
 							const postElement = document.createElement('div');
 							postElement.className = 'blog-card';
 							postElement.innerHTML = `<a href="${post.enllac}"><h4 class="h4-b" >${post.titol}</h4></a><p>${post.descripcio}</p>`;
-							if (index + 1 < posts.length && posts.length <= 3) postElement.innerHTML = postElement.innerHTML + `<hr />`;
+							if (index + 1 < numMaxPosts) postElement.innerHTML = postElement.innerHTML + `<hr />`;
 							blogList.appendChild(postElement);
 						}
 						
 					});
-					if (posts.length > 3) {
+					if (posts.length > numMaxPosts) {
 							const carregames = document.createElement('a');
             				carregames.href = 'blog.html'; // enllaç al blog
             				carregames.textContent = 'Carrega totes les novetats...';
