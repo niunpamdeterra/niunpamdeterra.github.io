@@ -36,7 +36,7 @@
 			//Script per generar les notícies dinàmicament
 			//Per generar una nova notícia cal crear un fitxer "postX.html" on X és el número de la notícia, després cal actualitzar
 			//el fitxer directori_posts.json amb el títol, descripció i enllaç del posts.
-			fetch('directori_posts.json')
+			fetch('assets/posts/directori_posts.json')
 				.then(response => response.json())
 				.then(posts => {
 					const blogList = document.querySelector('.blog-list');
