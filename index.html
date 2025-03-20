@@ -47,19 +47,20 @@
 					});
 					const blogList = document.querySelector('.blog-list');
 					posts.forEach((post, index) => {
-						if(index <3) {
+						if(index < 3) {
 							const postElement = document.createElement('div');
 							postElement.className = 'blog-card';
 							postElement.innerHTML = `<a href="${post.enllac}"><h4 class="h4-b" >${post.titol}</h4></a><p>${post.descripcio}</p>`;
+							if (index + 1 < posts.length) postElement.innerHTML = postElement.innerHTML + `<hr />`;
 							blogList.appendChild(postElement);
 						}
 						
 					});
 					if (posts.length > 3) {
 							const carregames = document.createElement('a');
-            				carregames.href = 'blog.html'; // Link to the full blog page
+            				carregames.href = 'blog.html'; // enllaç al blog
             				carregames.textContent = 'Carrega totes les novetats...';
-            				carregames.className = 'carrega-mes'; // Add a class for styling
+            				carregames.className = 'carrega-mes'; // classe per si calen estils
             				blogList.appendChild(carregames);
 					};
 			});
