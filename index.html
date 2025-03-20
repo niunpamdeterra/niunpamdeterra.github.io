@@ -41,8 +41,7 @@
 				.then(posts => {
 					const blogList = document.querySelector('.blog-list');
 					posts.forEach(post => {
-						const postElement = document.createElement('a');
-						postElement.href = post.enllac;
+						const postElement = document.createElement('div');
 						postElement.className = 'blog-card';
 						postElement.innerHTML = `<h4>${post.titol}</h4><p>${post.descripcio}</p><ul class="actions"><li><a href="${post.descripcio}" class="button alt">Amplia notícia</a></li></ul>`;
 						blogList.appendChild(postElement);
