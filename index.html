@@ -51,7 +51,7 @@
 						if(index < numMaxPosts) {
 							const postElement = document.createElement('div');
 							postElement.className = 'blog-card';
-							postElement.innerHTML = `<a href="${post.enllac}"><h4 class="h4-b" >${post.titol}</h4></a><p>${post.descripcio}</p>`;
+							postElement.innerHTML = `<a href="assets/posts/${post.enllac}"><h4 class="h4-b" >${post.titol}</h4></a><p>${post.descripcio}</p><ul class="actions"><li><a href="assets/posts/${post.enllac}" class="button alt small">Amplia notícia</a></li></ul>`;
 							if (index + 1 < numMaxPosts) postElement.innerHTML = postElement.innerHTML + `<hr />`;
 							blogList.appendChild(postElement);
 						}
@@ -125,48 +125,16 @@
 				</div>
 			</section>
 			-->
-		<!-- Three 
 			<section id="three">
 				<div class="inner">
-					<article>
-						<div class="content">
-							<span class="icon fa-laptop"></span>
-							<header>
-								<h3>Tempus Feugiat</h3>
-							</header>
-							<p>Morbi interdum mollis sapien. Sed ac risus. Phasellus lacinia, magna lorem ullamcorper laoreet, lectus arcu.</p>
-							<ul class="actions">
-								<li><a href="#" class="button alt">Learn More</a></li>
-							</ul>
-						</div>
-					</article>
-					<article>
-						<div class="content">
-							<span class="icon fa-diamond"></span>
-							<header>
-								<h3>Aliquam Nulla</h3>
-							</header>
-							<p>Ut convallis, sem sit amet interdum consectetuer, odio augue aliquam leo, nec dapibus tortor nibh sed.</p>
-							<ul class="actions">
-								<li><a href="#" class="button alt">Learn More</a></li>
-							</ul>
-						</div>
-					</article>
-					<article>
-					<div class="content">
-							<span class="icon fa-laptop"></span>
-							<header>
-								<h3>Sed Magna</h3>
-							</header>
-							<p>Suspendisse mauris. Fusce accumsan mollis eros. Pellentesque a diam sit amet mi ullamcorper vehicula.</p>
-							<ul class="actions">
-								<li><a href="#" class="button alt">Learn More</a></li>
-							</ul>
-						</div>
-					</article>
+					<header>
+						<h2>Darrers vídeos</h2>
+					</header>
+					<p>
+					<iframe src="https://www.youtube.com/embed/?listType=user_uploads&list=niunpamdeterra7740" width="480" height="400"></iframe>
+					</p>
 				</div>
 			</section>
-		-->
 		<!-- Footer -->
 		<div id="footer"></div>
 
