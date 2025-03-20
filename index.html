@@ -39,12 +39,27 @@
 			fetch('assets/posts/directori_posts.json')
 				.then(response => response.json())
 				.then(posts => {
+					// Ordena els posts de més recent a més vell
+					posts.sort((a, b) => {
+						const dateA = new Date(a.data.split('/').reverse().join('-'));
+						const dateB = new Date(b.data.split('/').reverse().join('-'));
+						return dateB - dateA;
+					});
 					const blogList = document.querySelector('.blog-list');
-					posts.forEach(post => {
-						const postElement = document.createElement('div');
-						postElement.className = 'blog-card';
-						postElement.innerHTML = `<h4>${post.titol}</h4><p>${post.descripcio}</p><ul class="actions"><li><a href="${post.descripcio}" class="button alt">Amplia notícia</a></li></ul>`;
-						blogList.appendChild(postElement);
+					posts.forEach((post, index) => {
+						if(index <3) {
+							const postElement = document.createElement('div');
+							postElement.className = 'blog-card';
+							postElement.innerHTML = `<h4 class="h4-b">${post.titol}</h4><p>${post.descripcio}</p><ul class="actions"><li><a href="${post.descripcio}" class="button alt">Amplia notícia</a></li></ul>`;
+							blogList.appendChild(postElement);
+						}
+						if (posts.length > 3) {
+							const carregames = document.createElement('a');
+            				carregames.href = 'blog.html'; // Link to the full blog page
+            				carregames.textContent = 'Carrega totes les novetats...';
+            				carregames.className = 'carrega-mes'; // Add a class for styling
+            				blogList.appendChild(carregames);
+						}
 				});
 			});
 		</script>

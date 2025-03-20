@@ -1,4 +1,6 @@
 [
-    { "titol": "Post de prova 1", "descripcio": "Descripció de prova", "enllac": "post1.html" },
-    { "titol": "Post de prova 2", "descripcio": "Una altra descripció de prova...", "enllac": "post2.html" }
+    { "titol": "Post de prova 1", "descripcio": "Descripció de prova", "enllac": "post1.html", "data": "20/03/2025" },
+    { "titol": "Post de prova 2", "descripcio": "Una altra descripció de prova...", "enllac": "post2.html", "data": "19/03/2025" }
+    { "titol": "Post de prova 3", "descripcio": "Una altra descripció de prova...", "enllac": "post3.html", "data": "18/03/2025" }
+    { "titol": "Post de prova 4", "descripcio": "Una altra descripció de prova...", "enllac": "post4.html", "data": "17/03/2025" }
 ]
