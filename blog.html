@@ -40,7 +40,6 @@
 			fetch('assets/posts/directori_posts.json')
 				.then(response => response.json())
 				.then(posts => {
-					const numMaxPosts = 3
 					// Ordena els posts de més recent a més vell
 					posts.sort((a, b) => {
 						const dateA = new Date(a.data.split('/').reverse().join('-'));
@@ -57,20 +56,12 @@
 						}
 						
 					});
-					if (posts.length > numMaxPosts) {
-							const carregames = document.createElement('a');
-            				carregames.href = 'blog.html'; // enllaç al blog
-            				carregames.textContent = 'Carrega totes les novetats...';
-            				carregames.className = 'carrega-mes'; // classe per si calen estils
-            				blogList.appendChild(carregames);
-					};
 			});
 		</script>
 		<div id="header"></div>
 		<!-- One -->
         <section class="blog-section">
             <h2>Novetats</h2>
-            <a href="#" class="see-all">See all posts</a>
             <div class="posts">
             </div>
         </section>
