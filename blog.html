@@ -1,1 +1,115 @@
-En construcció
+<!DOCTYPE HTML>
+<!--
+	Introspect by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+	<head>
+		<title>Blog - Ni un pam de terra</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+        <link rel="stylesheet" href="assets/css/llista_blog.css">
+		<!-- afegir aquí els estils personalitzats del web -->
+		<style>
+			h2 {
+				color: black;
+			}
+		</style>
+	</head>
+	
+	<body>
+		<script>
+			fetch('header.html')
+			  .then(response => response.text())
+			  .then(data => {
+				document.getElementById('header').innerHTML = data;
+				const script = document.createElement('script');
+            	script.src = 'assets/js/main.js';
+           		document.body.appendChild(script);
+			  });
+			fetch('peudepagina.html')
+				.then(response => response.text())
+				.then(data => {
+				document.getElementById('footer').innerHTML = data;
+			});
+			//Script per generar les notícies dinàmicament
+			//Per generar una nova notícia cal crear un fitxer "postX.html" on X és el número de la notícia, després cal actualitzar
+			//el fitxer directori_posts.json amb el títol, descripció i enllaç del posts.
+			fetch('assets/posts/directori_posts.json')
+				.then(response => response.json())
+				.then(posts => {
+					const numMaxPosts = 3
+					// Ordena els posts de més recent a més vell
+					posts.sort((a, b) => {
+						const dateA = new Date(a.data.split('/').reverse().join('-'));
+						const dateB = new Date(b.data.split('/').reverse().join('-'));
+						return dateB - dateA;
+					});
+					const blogList = document.querySelector('.posts');
+					posts.forEach((post, index) => {
+						if(index < numMaxPosts) {
+							const postElement = document.createElement('div');
+							postElement.className = 'posts';
+							postElement.innerHTML = `<h3><a href="assets/posts/${post.enllac}">${post.titol}</a></h3><p>${post.descripcio}</p>`;
+							blogList.appendChild(postElement);
+						}
+						
+					});
+					if (posts.length > numMaxPosts) {
+							const carregames = document.createElement('a');
+            				carregames.href = 'blog.html'; // enllaç al blog
+            				carregames.textContent = 'Carrega totes les novetats...';
+            				carregames.className = 'carrega-mes'; // classe per si calen estils
+            				blogList.appendChild(carregames);
+					};
+			});
+		</script>
+		<div id="header"></div>
+		<!-- One -->
+        <section class="blog-section">
+            <h2>Novetats</h2>
+            <a href="#" class="see-all">See all posts</a>
+            <div class="posts">
+            </div>
+        </section>
+				
+		<!-- codi d'exemple 
+			<section id="two">
+				<div class="inner">
+					<article>
+						<div class="content">
+							<header>
+								<h3>Pellentesque adipis</h3>
+							</header>
+							<div class="image fit">
+								<img src="images/pic01.jpg" alt="" />
+							</div>
+							<p>Cumsan mollis eros. Pellentesque a diam sit amet mi magna ullamcorper vehicula. Integer adipiscin sem. Nullam quis massa sit amet lorem ipsum feugiat tempus.</p>
+						</div>
+					</article>
+					<article class="alt">
+						<div class="content">
+							<header>
+								<h3>Morbi interdum mol</h3>
+							</header>
+							<div class="image fit">
+								<img src="images/pic02.jpg" alt="" />
+							</div>
+							<p>Cumsan mollis eros. Pellentesque a diam sit amet mi magna ullamcorper vehicula. Integer adipiscin sem. Nullam quis massa sit amet lorem ipsum feugiat tempus.</p>
+						</div>
+					</article>
+				</div>
+			</section>
+			-->
+		<!-- Footer -->
+		<div id="footer"></div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+
+	</body>
+</html>
