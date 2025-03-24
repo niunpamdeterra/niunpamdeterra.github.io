@@ -48,13 +48,10 @@
 					});
 					const blogList = document.querySelector('.posts');
 					posts.forEach((post, index) => {
-						if(index < numMaxPosts) {
 							const postElement = document.createElement('div');
 							postElement.className = 'post';
 							postElement.innerHTML = `<h3><a href="assets/posts/${post.enllac}">${post.titol}</a></h3><p>${post.descripcio}</p>`;
-							blogList.appendChild(postElement);
-						}
-						
+							blogList.appendChild(postElement);					
 					});
 			});
 		</script>
