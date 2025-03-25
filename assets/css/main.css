@@ -903,6 +903,12 @@
 
 	}
 
+	.fa-bars {
+		display: flex;
+		justify-content: center;
+		align-items: center;      /* Ensures the element is perfectly centered */
+	}
+
 	@media screen and (max-width: 980px) {
 
 		.row > * {
