@@ -1,0 +1,69 @@
+<!DOCTYPE HTML>
+<!--
+	Introspect by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+	<head>
+		<title>Adhesius de Ni un pam de terra</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="/assets/css/main.css" />
+	<style>
+		#footer {
+			background: #00c6ff;
+			}
+		h1 {
+			color: black;
+		}
+	</style>
+	</head>
+	<body>
+
+		<script>
+			fetch('../../header.html')
+			  .then(response => response.text())
+			  .then(data => {
+				document.getElementById('header').innerHTML = data;
+				const script = document.createElement('script');
+            	script.src = 'assets/js/main.js';
+           		document.body.appendChild(script);
+			  });
+			fetch('../../peudepagina.html')
+				.then(response => response.text())
+				.then(data => {
+				document.getElementById('footer').innerHTML = data;
+			});
+		</script>
+		<div id="header"></div>
+
+		<!-- Main -->
+			<section id="main" >
+				<div class="inner">
+					<header class="major special">
+						<h1 >Adhesius de Ni un pam de terra</h1>
+					</header>
+					<!-- Afegir la imatge en aquesta línia a la propietat source, també cal afegir la imatge a la carpeta images -->
+					<a href="#" class="image fit"><img src="/images/banner_donvenim.jpeg" alt="" /></a>
+                    <p>Des de la seva creació, Ni Un Pam de Terra ha estat una veu activa en la defensa d’un territori clau per a la biodiversitat i la sobirania alimentària. La plataforma, impulsada per un grup de veïnes preocupades per l’avenç implacable de la urbanització, es va constituir amb l’objectiu de posar frena als plans d’expansió urbanística –com els projectes ARE Eixample Sud i Eixample Nord– i a les amenaces derivades de l’ampliació de l’aeroport.</p>
+                    <ul>
+                        <li><strong>Llista de coses</strong>: Considerat l’amenaça més immediata, amb obres que posaven en perill amplíssimes zones agrícoles i naturals del Prat.</li>
+                        <li><strong>Eixample Nord</strong>: Un projecte d’expansió que, tot i quedar aparcat en alguns moments, sempre ha estat objecte de crítica per la seva proposta d’omplir de blocs i ciment espais amb gran valor mediambiental.</li>
+                        <li><strong>Aeroport</strong>: L’expansió prevista que afecta directament àrees protegides, com la llacuna de la Ricarda, situant en risc ecosistemes ja vulnerables.</li>
+                    </ul>
+
+                    <p><strong>Accions Directes i Mobilitzacions Ciutadanes</strong></p>
+				</div>
+			</section>
+
+		<!-- Footer -->
+		<div id="footer"></div>
+
+		<!-- Scripts -->
+			<script src="/assets/js/jquery.min.js"></script>
+			<script src="/assets/js/skel.min.js"></script>
+			<script src="/assets/js/util.js"></script>
+
+	</body>
+</html>
