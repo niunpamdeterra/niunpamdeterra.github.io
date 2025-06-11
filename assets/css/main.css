@@ -3352,6 +3352,11 @@
 
 /* Banner */
 
+	#especialmani {
+		display: block;
+  		margin: auto;
+	}
+
 	#banner {
 		background-color: #00c6ff;
 		color: #f2a3a5;
