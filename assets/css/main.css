@@ -3352,9 +3352,9 @@
 
 /* Banner */
 
-	#especialmani {
-		display: block;
-  		margin: auto;
+	#cartell {
+		display: flex;
+  		justify-content: center;
 	}
 
 	#banner {
