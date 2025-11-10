@@ -10,7 +10,7 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
-		<link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 	<style>
 		#footer {
 			background: #00c6ff;
@@ -18,19 +18,16 @@
 		h1 {
 			color: black;
 		}
-		.galeria {
-			display: grid;
-			grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-			gap: 15px;
+		.swiper {
+			width: 600px;
+			max-width: 100%;
+			height: 400px;
 		}
-		.galeria img {
+		.swiper-slide img {
 			width: 100%;
+			height: 100%;
+			object-fit: cover;
 			border-radius: 8px;
-			transition: transform 0.2s;
-			cursor: pointer;
-		}
-		.galeria img:hover {
-			transform: scale(1.05);
 		}
 	</style>
 	</head>
@@ -59,13 +56,25 @@
 					<header class="major special">
 						<h1 >Qui som?</h1>
 					</header>
-					<div class="galeria">
-						<a href="/images/cartell_mani_14j.png" data-lightbox="galeria" data-title="Cartell Mani 14J">
-						<img src="/images/cartell_mani_14j.png" alt="Cartell Mani 14J">
-						</a>
-						<a href="/images/banner_quisom.jpeg" data-lightbox="galeria" data-title="Qui som?">
-						<img src="/images/banner_quisom.jpeg" alt="Qui som?">
-						</a>
+					<div class="swiper">
+						<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<img src="/images/mani-14j-npdt.jpg" alt="Mani 14J">
+						</div>
+						<div class="swiper-slide">
+							<img src="/images/banner_quisom.jpeg" alt="Qui som?">
+						</div>
+						<div class="swiper-slide">
+							<img src="/images/mani-14j-npdt-avinguda.jpg" alt="Mani 14J a l'avinguda">
+						</div>
+						</div>
+
+						<!-- Botons de navegació -->
+						<div class="swiper-button-next"></div>
+						<div class="swiper-button-prev"></div>
+
+						<!-- Paginació (punts) -->
+						<div class="swiper-pagination"></div>
 					</div>
 					<p>NUPDT és una plataforma veïnal ecologista que sorgeix per defensar el nostre territori davant els plans especulatius que amenacen el seu futur. Ens trobem en un moment clau, on l’ampliació de l’aeroport s'ha convertit en l’exemple més evident d’una dinàmica destructiva que posa en perill els espais que tant ens importen.</p>
 
@@ -95,6 +104,19 @@
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/skel.min.js"></script>
 			<script src="assets/js/util.js"></script>
-
+			<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+		<script>
+			const swiper = new Swiper('.swiper', {
+			loop: true,                // fa que torni a començar
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',
+			},
+			pagination: {
+				el: '.swiper-pagination',
+				clickable: true,
+			},
+			});
+		</script>
 	</body>
 </html>
