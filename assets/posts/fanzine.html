@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+<!--
+	Introspect by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+	<head>
+		<title>Fanzine de Ni un pam de terra</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="/assets/css/main.css" />
+	<style>
+		#footer {
+			background: #00c6ff;
+			}
+		h1 {
+			color: black;
+		}
+	</style>
+	</head>
+	<body>
+
+		<script>
+			fetch('../../header.html')
+			  .then(response => response.text())
+			  .then(data => {
+				document.getElementById('header').innerHTML = data;
+				const script = document.createElement('script');
+            	script.src = 'assets/js/main.js';
+           		document.body.appendChild(script);
+			  });
+			fetch('../../peudepagina.html')
+				.then(response => response.text())
+				.then(data => {
+				document.getElementById('footer').innerHTML = data;
+			});
+		</script>
+		<div id="header"></div>
+
+		<!-- Main -->
+			<section id="main" >
+				<div class="inner">
+					<header class="major special">
+						<h1 >Fanzine de Ni un pam de terra</h1>
+					</header>
+                    <p>Per descarregar el fanzine obre el fitxer adjunt d'aquest post i imprimeix el teu propi fanzine de Ni un pam de terra!</p>
+					<embed src="https://drive.google.com/viewerng/viewer?embedded=true&url=https://niunpamdeterra.cat/images/Fanzine-NPDT.pdf" width="500" height="375">
+				</div>
+			</section>
+
+		<!-- Footer -->
+		<div id="footer"></div>
+
+		<!-- Scripts -->
+			<script src="/assets/js/jquery.min.js"></script>
+			<script src="/assets/js/skel.min.js"></script>
+			<script src="/assets/js/util.js"></script>
+
+	</body>
+</html>
